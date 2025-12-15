@@ -1,0 +1,77 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "telex/woo-product-calculator",
+  "version": "0.1.0",
+  "title": "WooCommerce Product Calculator",
+  "category": "woocommerce",
+  "icon": "calculator",
+  "description": "A dynamic product calculator for WooCommerce with customizable fields and multi-step navigation.",
+  "example": {
+    "attributes": {
+      "calculatorTitle": "Configure Your Labels",
+      "productId": 0,
+      "steps": [
+        {
+          "title": "Dimensions",
+          "fields": [
+            {
+              "type": "number",
+              "label": "Width (mm)",
+              "name": "width",
+              "required": true
+            },
+            {
+              "type": "number",
+              "label": "Height (mm)",
+              "name": "height",
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "attributes": {
+    "calculatorTitle": {
+      "type": "string",
+      "default": "Configure Your Product"
+    },
+    "productId": {
+      "type": "number",
+      "default": 0
+    },
+    "steps": {
+      "type": "array",
+      "default": [
+        {
+          "title": "Product Details",
+          "fields": []
+        }
+      ]
+    },
+    "priceCalculation": {
+      "type": "object",
+      "default": {
+        "enabled": false,
+        "formula": ""
+      }
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "Add to Cart"
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": true,
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "textdomain": "woo-product-calculator",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

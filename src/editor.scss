@@ -1,0 +1,221 @@
+
+.woo-calculator-editor {
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	background: #fff;
+
+	.calculator-preview {
+		padding: 2rem;
+
+		h3 {
+			margin-top: 0;
+			text-align: center;
+		}
+
+		.selected-product-info {
+			background: #f0f6fc;
+			padding: 1rem;
+			border-radius: 4px;
+			margin-bottom: 1.5rem;
+			text-align: center;
+
+			p {
+				margin: 0;
+				font-size: 0.9rem;
+			}
+		}
+
+		.calculator-steps-preview {
+			display: flex;
+			justify-content: center;
+			gap: 1rem;
+			margin-bottom: 2rem;
+			flex-wrap: wrap;
+
+			.step-indicator {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding: 0.5rem;
+				border-radius: 4px;
+				transition: background 0.2s;
+
+				&.active {
+					background: #f0f6fc;
+				}
+
+				.step-number {
+					width: 32px;
+					height: 32px;
+					border-radius: 50%;
+					background: #e0e0e0;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					font-weight: bold;
+					margin-bottom: 0.25rem;
+				}
+
+				.step-title {
+					font-size: 0.875rem;
+					text-align: center;
+				}
+
+				&.active .step-number {
+					background: #0073aa;
+					color: #fff;
+				}
+			}
+		}
+
+		.calculator-step-content {
+			min-height: 200px;
+			padding: 1.5rem;
+			background: #f9f9f9;
+			border-radius: 4px;
+			margin-bottom: 1.5rem;
+
+			h4 {
+				margin-top: 0;
+			}
+
+			.calculator-fields {
+				display: grid;
+				gap: 1rem;
+
+				.calculator-field {
+					padding: 1rem;
+					background: #fff;
+					border: 1px solid #ddd;
+					border-radius: 4px;
+
+					label {
+						display: block;
+						font-weight: 600;
+						margin-bottom: 0.5rem;
+
+						.required {
+							color: #dc3232;
+						}
+					}
+
+					.field-type-indicator {
+						display: inline-block;
+						padding: 0.25rem 0.75rem;
+						background: #0073aa;
+						color: #fff;
+						border-radius: 3px;
+						font-size: 0.75rem;
+						font-weight: 600;
+						text-transform: uppercase;
+					}
+				}
+			}
+
+			.no-fields {
+				text-align: center;
+				color: #666;
+				font-style: italic;
+				padding: 2rem;
+			}
+		}
+
+		.calculator-navigation {
+			display: flex;
+			justify-content: space-between;
+			gap: 1rem;
+		}
+	}
+}
+
+.components-panel__body {
+	.product-info {
+		padding: 1rem;
+		background: #f0f6fc;
+		border-radius: 4px;
+		margin-top: 1rem;
+
+		p {
+			margin: 0;
+			font-size: 0.9rem;
+		}
+	}
+
+	.calculator-steps-list,
+	.calculator-fields-list {
+		margin-bottom: 1rem;
+
+		h4 {
+			margin-top: 1rem;
+			margin-bottom: 0.5rem;
+		}
+
+		.calculator-step-item,
+		.calculator-field-item {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0.75rem;
+			margin-bottom: 0.5rem;
+			background: #f9f9f9;
+			border: 1px solid #ddd;
+			border-radius: 4px;
+			cursor: pointer;
+			transition: all 0.2s;
+
+			&:hover {
+				background: #f0f0f0;
+			}
+
+			&.active {
+				background: #0073aa;
+				color: #fff;
+				border-color: #0073aa;
+
+				.components-button {
+					color: #fff;
+
+					&:hover {
+						color: #dc3232;
+					}
+				}
+			}
+
+			span {
+				flex: 1;
+				font-weight: 500;
+			}
+
+			.components-button {
+				margin-left: 0.5rem;
+			}
+		}
+	}
+
+	.calculator-add-step,
+	.calculator-add-field {
+		width: 100%;
+		justify-content: center;
+		margin-top: 0.5rem;
+	}
+
+	.calculator-option-item {
+		padding: 1rem;
+		margin-bottom: 1rem;
+		background: #f9f9f9;
+		border: 1px solid #ddd;
+		border-radius: 4px;
+
+		.components-base-control {
+			margin-bottom: 0.5rem;
+		}
+
+		.components-button {
+			margin-top: 0.5rem;
+		}
+	}
+
+	.components-notice {
+		margin-bottom: 1rem;
+	}
+}

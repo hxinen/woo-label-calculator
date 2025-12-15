@@ -89,8 +89,9 @@ if ( ! function_exists( 'telex_woo_calculator_render_callback' ) ) {
 			)
 		);
 		
-		// Load the render template
-		require __DIR__ . '/build/render.php';
+		
+		// Load the render template and return its output
+		return require __DIR__ . '/build/render.php';
 	}
 }
 
